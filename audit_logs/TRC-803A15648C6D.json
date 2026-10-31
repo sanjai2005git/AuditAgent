@@ -1,0 +1,41 @@
+{
+  "trace_id": "TRC-803A15648C6D",
+  "session_id": "api_session",
+  "timestamp": "2026-10-31T02:35:47.056119+00:00",
+  "user_query": "What is the total number of customers?",
+  "sanitized_query": "What is the total number of customers?",
+  "intent": "TEXT_TO_SQL",
+  "tool_called": "sql_tool",
+  "tool_args": {
+    "query": "What is the total number of customers?"
+  },
+  "generated_sql": "SELECT COUNT(*) as total_customers FROM customers",
+  "executed_sql": "SELECT COUNT(*) as total_customers FROM customers",
+  "row_count": 1,
+  "cost_units": 600,
+  "ml_prediction": null,
+  "shap_top_features": [],
+  "guardrail_flags": {
+    "pii_masked": false,
+    "pii_details": {
+      "ssn": 0,
+      "email": 0,
+      "phone": 0,
+      "card": 0
+    },
+    "requires_hitl_approval": false,
+    "hitl_reasons": []
+  },
+  "verification_status": "VERIFIED_ACCURATE",
+  "verification_discrepancy": 0.0,
+  "agent_response": "Found 1 record(s):\n - total_customers: **1000**",
+  "execution_latency_ms": 78.28970000264235,
+  "replayable_state": {
+    "session_id": "api_session",
+    "intent": "TEXT_TO_SQL",
+    "tool_called": "sql_tool",
+    "executed_sql": "SELECT COUNT(*) as total_customers FROM customers",
+    "row_count": 1,
+    "ml_prediction": null
+  }
+}

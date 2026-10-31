@@ -1,0 +1,45 @@
+{
+  "trace_id": "TRC-2457DD6D0636",
+  "session_id": "api_session",
+  "timestamp": "2026-10-31T02:35:47.291643+00:00",
+  "user_query": "Predict credit risk for customer #5",
+  "sanitized_query": "Predict credit risk for customer #5",
+  "intent": "ML_PREDICT",
+  "tool_called": "ml_tool",
+  "tool_args": {
+    "customer_id": 5
+  },
+  "generated_sql": "-- Feature retrieval for customer 5",
+  "executed_sql": "SELECT * FROM customers c JOIN loans l ON c.customer_id = l.customer_id WHERE c.customer_id = 5",
+  "row_count": 1,
+  "cost_units": 150,
+  "ml_prediction": 0.982383131980896,
+  "shap_top_features": [
+    "missed_payments_2yr",
+    "credit_score",
+    "debt_to_income"
+  ],
+  "guardrail_flags": {
+    "pii_masked": false,
+    "pii_details": {
+      "ssn": 0,
+      "email": 0,
+      "phone": 0,
+      "card": 0
+    },
+    "requires_hitl_approval": false,
+    "hitl_reasons": []
+  },
+  "verification_status": "VERIFIED_PASS",
+  "verification_discrepancy": 0.0,
+  "agent_response": "### Explainable Credit Risk Assessment for Jennifer Gonzalez (ID: 5)\n\n- Predicted Default Probability: 98.24%\n- Risk Classification: HIGH RISK\n- Baseline Population Expectation: 1.00%\n\nSHAP Attribution Breakdown (Why this prediction was made):\n- Top Risk Elevators: missed_payments_2yr (+2.42), credit_score (+1.45), debt_to_income (+0.71)\n- Top Protective Factors: interest_rate (-0.19), employment_years (-0.15)\n\n> Audit Note: Loan default prediction is 98.2% (HIGH RISK). Baseline portfolio expectation is 1.0%. Primary factors elevating risk: [Missed Payments 2Yr (5.0, attribution: +2.423), Credit Score (550.0, attribution: +1.449), Debt To Income ($0, attribution: +0.708)]. Compensating protective factors: [Interest Rate (9.7, attribution: -0.194), Employment Years (14.0, attribution: -0.149)].",
+  "execution_latency_ms": 92.4955999944359,
+  "replayable_state": {
+    "session_id": "api_session",
+    "intent": "ML_PREDICT",
+    "tool_called": "ml_tool",
+    "executed_sql": "SELECT * FROM customers c JOIN loans l ON c.customer_id = l.customer_id WHERE c.customer_id = 5",
+    "row_count": 1,
+    "ml_prediction": 0.982383131980896
+  }
+}

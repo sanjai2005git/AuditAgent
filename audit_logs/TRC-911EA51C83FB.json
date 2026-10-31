@@ -1,0 +1,43 @@
+{
+  "trace_id": "TRC-911EA51C83FB",
+  "session_id": "default_session",
+  "timestamp": "2026-10-31T02:23:04.076882+00:00",
+  "user_query": "DROP TABLE customers",
+  "sanitized_query": "DROP TABLE customers",
+  "intent": "HIGH_IMPACT_APPROVAL",
+  "tool_called": "hitl_approval_guard",
+  "tool_args": {
+    "request_id": "REQ-C8699F28"
+  },
+  "generated_sql": null,
+  "executed_sql": null,
+  "row_count": 0,
+  "cost_units": 0,
+  "ml_prediction": null,
+  "shap_top_features": [],
+  "guardrail_flags": {
+    "pii_masked": false,
+    "pii_details": {
+      "ssn": 0,
+      "email": 0,
+      "phone": 0,
+      "card": 0
+    },
+    "requires_hitl_approval": true,
+    "hitl_reasons": [
+      "Contains high-impact or mutation keyword 'drop'"
+    ]
+  },
+  "verification_status": "NO_NUMERICS",
+  "verification_discrepancy": 0.0,
+  "agent_response": "### High-Impact Guardrail Interception\n\nThe requested operation requires Human Approval (HITL) before execution.\n\n- Approval Request ID: REQ-C8699F28\n- Status: PENDING REVIEW\n- Safety Trigger: Contains high-impact or mutation keyword 'drop'\n- Enforcement Policy: Enterprise strict read-only and write-prevention rules are active. A designated administrator must review and approve this request via the Guardrail Inspector tab before any database modifications can proceed.",
+  "execution_latency_ms": 84.93009998346679,
+  "replayable_state": {
+    "session_id": "default_session",
+    "intent": "HIGH_IMPACT_APPROVAL",
+    "tool_called": "hitl_approval_guard",
+    "executed_sql": null,
+    "row_count": 0,
+    "ml_prediction": null
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "trace_id": "TRC-F20065638665",
+  "session_id": "default_session",
+  "timestamp": "2026-10-31T02:34:30.477359+00:00",
+  "user_query": "What is the average credit score across all customers?",
+  "sanitized_query": "What is the average credit score across all customers?",
+  "intent": "TEXT_TO_SQL",
+  "tool_called": "sql_tool",
+  "tool_args": {
+    "query": "What is the average credit score across all customers?"
+  },
+  "generated_sql": "SELECT ROUND(AVG(credit_score), 2) as avg_credit_score FROM customers",
+  "executed_sql": "SELECT ROUND(AVG(credit_score), 2) as avg_credit_score FROM customers",
+  "row_count": 1,
+  "cost_units": 600,
+  "ml_prediction": null,
+  "shap_top_features": [],
+  "guardrail_flags": {
+    "pii_masked": false,
+    "pii_details": {
+      "ssn": 0,
+      "email": 0,
+      "phone": 0,
+      "card": 0
+    },
+    "requires_hitl_approval": false,
+    "hitl_reasons": []
+  },
+  "verification_status": "VERIFIED_ACCURATE",
+  "verification_discrepancy": 0.0,
+  "agent_response": "Found 1 record(s):\n - avg_credit_score: **682.72**",
+  "execution_latency_ms": 49.67870001564734,
+  "replayable_state": {
+    "session_id": "default_session",
+    "intent": "TEXT_TO_SQL",
+    "tool_called": "sql_tool",
+    "executed_sql": "SELECT ROUND(AVG(credit_score), 2) as avg_credit_score FROM customers",
+    "row_count": 1,
+    "ml_prediction": null
+  }
+}

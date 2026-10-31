@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.duckdb.wal
+.pytest_cache/
+.env
+venv/
+*.log

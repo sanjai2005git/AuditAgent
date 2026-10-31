@@ -1,0 +1,41 @@
+{
+  "trace_id": "TRC-D1E264B5DA46",
+  "session_id": "default_session",
+  "timestamp": "2026-10-31T02:22:04.765100+00:00",
+  "user_query": "What is the average credit score of customers who defaulted on personal loans?",
+  "sanitized_query": "What is the average credit score of customers who defaulted on personal loans?",
+  "intent": "TEXT_TO_SQL",
+  "tool_called": "sql_tool",
+  "tool_args": {
+    "query": "What is the average credit score of customers who defaulted on personal loans?"
+  },
+  "generated_sql": "SELECT AVG(c.credit_score) as avg_credit_score, COUNT(*) as loan_count FROM loans l JOIN customers c ON l.customer_id = c.customer_id WHERE l.is_default = 1",
+  "executed_sql": "SELECT AVG(c.credit_score) as avg_credit_score, COUNT(*) as loan_count FROM loans l JOIN customers c ON l.customer_id = c.customer_id WHERE l.is_default = 1",
+  "row_count": 1,
+  "cost_units": 950,
+  "ml_prediction": null,
+  "shap_top_features": [],
+  "guardrail_flags": {
+    "pii_masked": false,
+    "pii_details": {
+      "ssn": 0,
+      "email": 0,
+      "phone": 0,
+      "card": 0
+    },
+    "requires_hitl_approval": false,
+    "hitl_reasons": []
+  },
+  "verification_status": "VERIFIED_ACCURATE",
+  "verification_discrepancy": 0.0,
+  "agent_response": "Found 1 record(s):\n - avg_credit_score: **630.5520581113801**, loan_count: **413**",
+  "execution_latency_ms": 139.11399999051355,
+  "replayable_state": {
+    "session_id": "default_session",
+    "intent": "TEXT_TO_SQL",
+    "tool_called": "sql_tool",
+    "executed_sql": "SELECT AVG(c.credit_score) as avg_credit_score, COUNT(*) as loan_count FROM loans l JOIN customers c ON l.customer_id = c.customer_id WHERE l.is_default = 1",
+    "row_count": 1,
+    "ml_prediction": null
+  }
+}
