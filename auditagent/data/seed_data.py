@@ -238,3 +238,4 @@ def seed_database(num_customers: int = 1000, num_loans: int = 1500, num_transact
 
 if __name__ == "__main__":
     seed_database()
+

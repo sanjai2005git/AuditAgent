@@ -106,3 +106,4 @@ if __name__ == "__main__":
     print(f"Monotonicity Rate: {res['monotonicity_rate_pct']}%")
     print(f"Perturbation Sensitivity Rate: {res['sensitivity_rate_pct']}%")
     print(f"Overall Faithfulness Score: {res['faithfulness_score_pct']}%")
+

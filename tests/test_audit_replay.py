@@ -21,3 +21,4 @@ def test_trace_logging_and_replay():
     assert replay["success"] is True
     assert replay["is_deterministic_match"] is True
     assert replay["match_details"]["row_count_match"] is True
+

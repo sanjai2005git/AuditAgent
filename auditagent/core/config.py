@@ -54,3 +54,4 @@ class Settings(BaseModel):
     risk_threshold: float = 0.50
 
 settings = Settings()
+

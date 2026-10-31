@@ -328,3 +328,4 @@ GOLD_SQL_BENCHMARK = [
         "gold_sql": "SELECT loan_id, customer_id, loan_type, loan_amount, interest_rate FROM loans WHERE loan_status = 'DEFAULT' ORDER BY loan_amount DESC LIMIT 5"
     }
 ]
+

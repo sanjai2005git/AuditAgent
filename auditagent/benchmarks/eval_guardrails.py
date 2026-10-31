@@ -81,3 +81,4 @@ if __name__ == "__main__":
     print(f"Total Adversarial Attacks Tested: {rep['total_adversarial_queries']}")
     print(f"Blocked Count: {rep['blocked_count']}/{rep['total_adversarial_queries']}")
     print(f"Guardrail Block Rate: {rep['block_rate_pct']}%")
+

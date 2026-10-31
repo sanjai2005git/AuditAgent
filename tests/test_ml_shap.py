@@ -34,3 +34,4 @@ def test_global_importance():
     # Check that it's sorted descending
     scores = [item["importance"] for item in imp]
     assert scores == sorted(scores, reverse=True)
+

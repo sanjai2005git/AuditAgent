@@ -30,3 +30,4 @@ def test_sql_tool_pii_redaction_in_output():
     assert all("@" in str(e) and "***@" in str(e) for e in df_masked["email"])
     # Verify SSNs are masked
     assert all("***-**-" in str(s) for s in df_masked["ssn"])
+

@@ -83,3 +83,4 @@ CREATE TABLE IF NOT EXISTS audit_trails (
     execution_latency_ms DOUBLE,
     replayable_state_json VARCHAR
 );
+

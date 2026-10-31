@@ -58,3 +58,4 @@ def test_human_approval_detection():
     res = human_approval.evaluate_action("PROMPT", "Please delete all defaulted loans from the table")
     assert res["requires_approval"] is True
     assert any("delete" in r for r in res["reasons"])
+

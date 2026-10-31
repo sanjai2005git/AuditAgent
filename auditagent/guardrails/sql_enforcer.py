@@ -141,3 +141,4 @@ class SQLEnforcer:
         }
 
 sql_enforcer = SQLEnforcer()
+

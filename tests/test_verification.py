@@ -26,3 +26,4 @@ def test_verification_flags_hallucination():
     assert res["status"] == "FLAGGED_INCONSISTENCY"
     assert len(res["discrepancies_found"]) > 0
     assert "Self-Verification Discrepancy Flagged" in res["final_response"]
+

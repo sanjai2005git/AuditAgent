@@ -84,3 +84,4 @@ class TraceReplayer:
         }
 
 trace_replayer = TraceReplayer()
+

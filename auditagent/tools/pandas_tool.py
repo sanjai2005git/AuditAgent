@@ -78,3 +78,4 @@ class PandasAnalysisTool:
         }
 
 pandas_tool = PandasAnalysisTool()
+

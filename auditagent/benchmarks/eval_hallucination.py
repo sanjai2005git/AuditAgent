@@ -137,3 +137,4 @@ if __name__ == "__main__":
     print(f"Hallucination Rate WITHOUT Verification: {res['hallucination_rate_without_verification_pct']}%")
     print(f"Hallucination Rate WITH Verification: {res['hallucination_rate_with_verification_pct']}%")
     print(f"Hallucination Reduction: {res['relative_reduction_pct']}% (Detected {res['hallucinations_detected_and_corrected']} hallucinations)")
+

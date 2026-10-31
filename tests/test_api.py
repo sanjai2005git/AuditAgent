@@ -61,3 +61,4 @@ def test_api_benchmarks():
     data = res.json()
     assert "headline_metrics" in data
     assert "sql_gold_questions_evaluated" in data["headline_metrics"]
+

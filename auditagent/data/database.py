@@ -123,3 +123,4 @@ class DatabaseManager:
             conn.close()
 
 db_manager = DatabaseManager()
+

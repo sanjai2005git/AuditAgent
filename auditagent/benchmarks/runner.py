@@ -87,3 +87,4 @@ def get_cached_or_run_benchmarks() -> dict[str, Any]:
 
 if __name__ == "__main__":
     run_all_benchmarks()
+

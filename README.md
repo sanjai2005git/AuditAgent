@@ -163,3 +163,4 @@ Lexsi builds AI systems where correctness, explainability, and enterprise safety
 2. **Deterministic Auditability:** Replays previous executions step-by-step from persistent logs (`TRC-XXXX`), verifying idempotency and provenance.
 3. **Multi-Tenant Enterprise Safety:** Hard enforcement of read-only permissions via AST inspection, automatic masking of customer PII, and human sign-off on sensitive mutations.
 4. **Empirical Self-Correction:** Proactively catches and auto-corrects arithmetic or statistical hallucinations using an independent verification loop.
+

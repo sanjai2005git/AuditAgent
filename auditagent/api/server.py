@@ -131,3 +131,4 @@ def get_benchmarks(refresh: bool = False):
     if refresh:
         return run_all_benchmarks()
     return get_cached_or_run_benchmarks()
+
